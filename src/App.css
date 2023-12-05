@@ -460,3 +460,26 @@ background-color: #ec6462;
 }
 
 
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+.modal-img {
+  max-width: 100%; /* Ensure the image fits within the modal */
+  height: 400px; /* Maintain aspect ratio */
+  width: auto;
+  margin-bottom: 10px; /* Space below the image */
+}

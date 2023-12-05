@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faGlobe, faLaptopCode, faBookOpen,faPhone, faEnvelope  } from '@fortawesome/free-solid-svg-icons';
@@ -9,10 +9,24 @@ import Logo from './assets/img/Sariahub.png'; // Make sure to import your logo
 import background from './assets/img/Sariahub.png'; // Make sure to import your background image
 import mission from './assets/img/mission.png'; // Make sure to import your mission icon
 import vision from './assets/img/vission.png'; // Make sure to import your vision icon
+import ads from './assets/img/ads.jpg'; // Make sure to import your vision icon
 
-import { useState } from 'react';
 
 function App() {
+  const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowModal(true);
+    }, 5000); // 5000ms = 5 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleClose = () => {
+    setShowModal(false);
+  };
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -21,6 +35,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+      <Modal show={showModal} onClose={handleClose} />
         <header>
           <nav>
             <img src={Logo} alt="Logo" />
@@ -137,6 +152,18 @@ const Contact = () => (
     </div>
   </section>
 );
+function Modal({ show, onClose }) {
+  if (!show) return null;
+
+  return (
+    <div className="modal-backdrop">
+      <div className="modal">
+        <button onClick={onClose}>Close</button>
+        <p><img src={ads} alt='Ads' className='modal-img'/></p>
+      </div>
+    </div>
+  );
+}
 
 
 
