@@ -39,7 +39,7 @@ function App() {
         </header>
 
         {/* Wrap Route components in a Routes component */}
-        <Routes>
+        <Routes  basename="/">
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
