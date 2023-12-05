@@ -340,7 +340,7 @@ background-color: #ec6462;
 }
 
 .email-icon {
-  color: #2196F3; /* Blue for email */
+  color: #ec6462; /* Blue for email */
   animation: oscillateRotate 2s ease-in-out infinite; /* Adjust the duration and easing as needed */
 
 }
