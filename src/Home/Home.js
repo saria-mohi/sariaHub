@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faGlobe, faLaptopCode, faBookOpen,faPhone, faEnvelope  } from '@fortawesome/free-solid-svg-icons';
+import {  faGlobe, faLaptopCode, faBookOpen,faPhone, faEnvelope, faTimes  } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp, faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 import Logo from '../assets/img/Sariahub.png'; // Make sure to import your logo
@@ -158,8 +158,14 @@ function Modal({ show, onClose }) {
   return (
     <div className="modal-backdrop">
       <div className="modal">
-        <button onClick={onClose}>Close</button>
+      <FontAwesomeIcon icon={faTimes} className="close-icon" onClick={onClose} />
+    <div className="modal-header">
+        <h1>Ads</h1>
+        </div>
+        <div className="modal-body">
         <p><img src={ads} alt='Ads' className='modal-img'/></p>
+        {/* <p>effeeeee</p> */}
+        </div>
       </div>
     </div>
   );
