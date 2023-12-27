@@ -80,7 +80,9 @@ const Index = () => (
     <div className="hero-content">
       <h1>Welcome to Our Online Courses</h1>
       <p>Expand your horizons with our expert-taught courses.</p>
-      <button className="cta-button">Explore Courses</button>
+      {/* add link service to Explore Courses buttion */}
+      <button className="cta-button"><Link to="/services">Explore Courses</Link></button>
+      {/* <button className="cta-button"><a href=''>Explore Courses</a></button> */}
     </div>
   </section>
 );
