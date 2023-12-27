@@ -1,6 +1,7 @@
 
 // import java1 from '../assets/img/Java1.png'; // Make sure to import your vision icon
 import java2 from '../assets/img/oop.png'; // Make sure to import your vision icon
+import java from '../assets/img/Java1.jpg'; // Make sure to import your vision icon
 import web from '../assets/img/html.jpeg'; // Make sure to import your vision icon
 import EnrollmentForm from './EnrollmentForm';
 import { useState } from 'react';
@@ -40,7 +41,7 @@ const CourseCard = ({ title, description, image , lable,enable}) => {
         <CourseCard
           title="Java for Beginner"
           description="Introduction to Java programming for beginners."
-          image={java2}
+          image={java}
           enable ="disabled"
           lable="Close"
 
