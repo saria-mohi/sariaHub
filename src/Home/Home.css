@@ -95,6 +95,7 @@ body {
     border: none;
     font-size: 2rem; /* Large icon size */
     cursor: pointer;
+    color: #333;
   }
   .mobile-menu {
     display: block;
@@ -102,6 +103,7 @@ body {
     top: 100%;
     left: 0;
     right: 0;
+    color: #333;
     background-color: #5f5f5f; /* Match your navbar color */
   }
   /* Header Styles */
@@ -163,7 +165,7 @@ body {
     width: 4px;
     background: linear-gradient(to bottom, #f39139 40%, transparent 40%, transparent 60%, #255e9e 60%);
     margin: 0 20px;
-    animation: oscillateRotate 2s ease-in-out infinite; /* Adjust the duration and easing as needed */
+    /* animation: oscillateRotate 2s ease-in-out infinite; Adjust the duration and easing as needed */
   
   }
   
@@ -221,8 +223,28 @@ body {
     line-height: 1.6; /* Adjust line height for better readability */
     /* Add any other font styling as needed */
   }
+  .img{
+    width: 100%;
   
-  
+  }
+  .additional-div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px; /* Adjust the margin as needed */
+  }
+  .course-card{
+    box-shadow: 0 4px 8px 0 rgb(37, 93, 157,0.3);;
+    transition: 0.3s;
+    width: 30%; 
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in; 
+    /* width: calc(33.33% - 20px); Adjust the width based on your design */
+  margin-bottom: 20px; /* Adjust the margin as needed */
+  }
   .services {
     display: flex;
     justify-content: space-around;
@@ -240,16 +262,19 @@ body {
     border-radius: 5px;
     animation: fadeIn 2s ease-in; /* Adjust duration and easing as needed */
     box-shadow: 0 4px 8px 0 rgba(157, 37, 135, 0.3);
+    cursor: pointer;
   
   }
   .service :hover{
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
   }
   
   .service-icon {
     font-size: 30px; /* Adjust the size as needed */
     color: #f5f5f5; /* Adjust the color as needed */
     margin-bottom: 10px; /* Spacing between icon and title */
+    cursor: pointer;
   }
   .services-header {
     text-align: center;
@@ -316,7 +341,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(45deg, #ee9ca7,#255e9e, #f39139);
+    background: linear-gradient(45deg, #f0eded,#ede6e7, #efe0d3);
   
   
   }
@@ -346,12 +371,12 @@ body {
   }
   
   .email-icon {
-    color: #f5f5f5; /* Blue for email */
+    color: #df0a0a; /* Blue for email */
     animation: oscillateRotate 2s ease-in-out infinite; /* Adjust the duration and easing as needed */
   
   }
   .whatsapp-icon {
-    color:#0c460e; /* Blue for email */
+    color:#098b0d; /* Blue for email */
     animation: oscillateRotate 2s ease-in-out infinite; /* Adjust the duration and easing as needed */
   
   }
@@ -366,8 +391,8 @@ body {
     display: inline-block;
     margin: 20px;
     text-decoration: none;
-    color: #333;
-    background-color: #ddd;
+    color: #ec6462;
+    /* background-color: #ddd; */
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease-in-out;
@@ -467,6 +492,50 @@ body {
         width: 400px !important;
         overflow: auto;
         height: 400px !important;
+      }
+      .modal{
+        margin-top: 20%;
+        max-width: 400px;
+        max-height: 400px;
+      }
+      .modal-header{
+        text-align: center;
+        color: #ec6462;
+        animation: fadeIn 2s ease-in; 
+        width: 400px;
+        overflow: auto;
+        height: auto;
+      }
+      .modal-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(37, 93, 157, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .close-icon{
+        /* position: absolute; */
+        top: 0;
+        right: 0;
+        font-size: 30px;
+        color: #555;
+        cursor: pointer;
+      }
+      .additional-div{
+        flex-direction: column;
+
+      }
+      .course-card{
+        width: 80%;
+        margin: 10px auto;
+      }
+      .img{
+        width: 100%;
+      
       }
   }
   @keyframes fadeIn {
