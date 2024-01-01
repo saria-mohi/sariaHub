@@ -6,7 +6,7 @@ import web from '../assets/img/html.jpeg'; // Make sure to import your vision ic
 import EnrollmentForm from './EnrollmentForm';
 import { useState } from 'react';
 
-const CourseCard = ({ title, description, image , lable,enable}) => {
+const CourseCard = ({ title, fees,description, image , lable,enable}) => {
   const [showEnrollmentForm, setShowEnrollmentForm] = useState(false);
 
   const toggleEnrollmentForm = () => {
@@ -18,7 +18,9 @@ const CourseCard = ({ title, description, image , lable,enable}) => {
         <img src={image} alt={` ${title}`} className='img' />
       </div>
       <div className="card-body">
+        
         <h3>{title}</h3>
+        <h4><b>{fees}</b></h4>
         <p>{description}</p>
       </div>
       <div className="card-footer">
@@ -40,6 +42,7 @@ const CourseCard = ({ title, description, image , lable,enable}) => {
         {/* Other service cards */}
         <CourseCard
           title="Java for Beginner"
+          fees="30.000 SDG"
           description="Introduction to Java programming for beginners."
           image={java}
           enable ="disabled"
@@ -48,6 +51,7 @@ const CourseCard = ({ title, description, image , lable,enable}) => {
         />
         <CourseCard
           title="Java Advanced"
+          fees="30.000 SDG"
           description="Advanced concepts and techniques in Java programming."
           image={java2}
           enable ="disabled"
@@ -56,6 +60,7 @@ const CourseCard = ({ title, description, image , lable,enable}) => {
         />
         <CourseCard
           title="Web Application"
+          fees="10.000 SDG"
           description="Building dynamic web applications using modern technologies."
           image={web}
           lable="Enroll"
