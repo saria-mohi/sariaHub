@@ -20,7 +20,7 @@ const CourseCard = ({ title, fees,description, image , lable,enable}) => {
       <div className="card-body">
         
         <h3>{title}</h3>
-        <h4><b>{fees}</b></h4>
+        <h4>Registeration Fees :<b>{fees}</b></h4>
         <p>{description}</p>
       </div>
       <div className="card-footer">
