@@ -50,16 +50,16 @@ const CourseCard = ({ title, description, image , lable,enable}) => {
           title="Java Advanced"
           description="Advanced concepts and techniques in Java programming."
           image={java2}
-          enable =""
-          lable="Enroll"
+          enable ="disabled"
+          lable="Close"
 
         />
         <CourseCard
           title="Web Application"
           description="Building dynamic web applications using modern technologies."
           image={web}
-          lable="Close"
-          enable ="disabled"
+          lable="Enroll"
+          enable =""
         />
       </div>
       {/* </div> */}
