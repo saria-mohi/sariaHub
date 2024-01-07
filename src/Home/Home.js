@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faTimes  } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import {  faTimes  } from '@fortawesome/free-solid-svg-icons';
 import Contact from '../Contact/Contact';
 import Logo from '../assets/img/Sariahub.png'; // Make sure to import your logo
 import background from '../assets/img/Sariahub.png'; // Make sure to import your background image
 import mission from '../assets/img/mission.png'; // Make sure to import your mission icon
 import vision from '../assets/img/vission.png'; // Make sure to import your vision icon
-import ads from '../assets/img/ads.jpg'; // Make sure to import your vision icon
+// import ads from '../assets/img/ads.jpg'; // Make sure to import your vision icon
 import './Home.css';
 import Services from '../Home/Services';
 
@@ -41,7 +41,7 @@ function Home() {
   return (
     <Router>
       <div className="App">
-      <Modal show={showModal} onClose={handleClose} />
+      {/* <Modal show={showModal} onClose={handleClose} /> */}
         <header>
           <nav>
             <img src={Logo} alt="Logo" />
@@ -157,24 +157,24 @@ const About = () => (
 //     </div>
 //   </section>
 // );
-function Modal({ show, onClose }) {
-  if (!show) return null;
+// function Modal({ show, onClose }) {
+//   if (!show) return null;
 
-  return (
-    <div className="modal-backdrop">
-      <div className="modal">
-      <FontAwesomeIcon icon={faTimes} className="close-icon" onClick={onClose} />
-    <div className="modal-header">
-        <h1>Ads</h1>
-        </div>
-        <div className="modal-body">
-        <p><img src={ads} alt='Ads' className='modal-img'/></p>
-        {/* <p>effeeeee</p> */}
-        </div>
-      </div>
-    </div>
-  );
-}
+//   return (
+//     <div className="modal-backdrop">
+//       <div className="modal">
+//       <FontAwesomeIcon icon={faTimes} className="close-icon" onClick={onClose} />
+//     <div className="modal-header">
+//         <h1>Ads</h1>
+//         </div>
+//         <div className="modal-body">
+//         <p><img src={ads} alt='Ads' className='modal-img'/></p>
+//         {/* <p>effeeeee</p> */}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
 
 
 

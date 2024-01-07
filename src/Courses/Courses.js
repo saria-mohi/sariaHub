@@ -63,7 +63,7 @@ const CourseCard = ({ title, fees,description, image , lable,enable}) => {
           fees="10.000 SDG"
           description="Building dynamic web applications using modern technologies."
           image={web}
-          lable="Enroll"
+          lable="Close"
           enable ="disabled"
         />
       </div>
