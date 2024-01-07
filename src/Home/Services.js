@@ -5,13 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 
 
-
-
-
-
-
-
-
 const Services = () => {
   const [showCoursesDiv, setShowCoursesDiv] = useState(false);
 
@@ -21,7 +14,7 @@ const Services = () => {
 
   return (
     <section className="services">
-    <div className="services-header">
+      <div className="services-header">
         <h2>Our Services</h2>
         <p>Welcome to the forefront of digital learning and innovation. At <a href='https://web.facebook.com/SARIAHUB/' target='blank'><b className='different'>SARIAHub</b></a>, we're dedicated to unlocking potential through our diverse range of online courses, tailored to elevate your skills and knowledge in today's competitive landscape. Beyond education, our expertise extends to crafting bespoke digital solutions – from dynamic websites to robust web and mobile applications. Each service is designed with precision and creativity, ensuring your goals are not just met, but exceeded. Partner with us to embark on a journey of learning and digital excellence, where your vision is transformed into reality.</p>
       </div>
