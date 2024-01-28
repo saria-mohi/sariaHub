@@ -21,17 +21,17 @@ const Services = () => {
       <div className="services-cards-container">
         <div className="service-card course" onClick={handleCoursesClick}>
           <FontAwesomeIcon icon={faBookOpen} className="service-icon" />
-          <h3>Courses</h3>
+          <h2>Courses</h2>
           <p>Description of your online courses service.</p>
         </div>
         <div className="service-card webSite">
           <FontAwesomeIcon icon={faGlobe} className="service-icon" />
-          <h3>Website Development</h3>
+          <h2>Website Development</h2>
           <p>Description of your website development service.</p>
         </div>
         <div className="service-card webAppilcation">
           <FontAwesomeIcon icon={faLaptopCode} className="service-icon" />
-          <h3>Web Application</h3>
+          <h2>Web Application</h2>
           <p>Description of your web application service.</p>
         </div>
       </div>

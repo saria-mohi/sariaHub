@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.css": "/sariaHub/static/css/main.403b60a8.css",
-    "main.js": "/sariaHub/static/js/main.8b60b42b.js",
+    "main.css": "/sariaHub/static/css/main.09e910c5.css",
+    "main.js": "/sariaHub/static/js/main.b44c63c4.js",
     "static/js/787.b32433d0.chunk.js": "/sariaHub/static/js/787.b32433d0.chunk.js",
     "static/media/Sariahub.png": "/sariaHub/static/media/Sariahub.b8b08107aa75d7183b73.png",
     "static/media/Java1.jpg": "/sariaHub/static/media/Java1.6ab3c398dc8f1aff7078.jpg",
+    "static/media/logoWhite.png": "/sariaHub/static/media/logoWhite.877065c4077ef4fc7da8.png",
+    "static/media/ads.jpeg": "/sariaHub/static/media/ads.d4e5d030c832bb68b399.jpeg",
     "index.html": "/sariaHub/index.html",
-    "main.403b60a8.css.map": "/sariaHub/static/css/main.403b60a8.css.map",
-    "main.8b60b42b.js.map": "/sariaHub/static/js/main.8b60b42b.js.map",
+    "static/media/getFetch.cjs": "/sariaHub/static/media/getFetch.40f37ddea2378391108f.cjs",
+    "main.09e910c5.css.map": "/sariaHub/static/css/main.09e910c5.css.map",
+    "main.b44c63c4.js.map": "/sariaHub/static/js/main.b44c63c4.js.map",
     "787.b32433d0.chunk.js.map": "/sariaHub/static/js/787.b32433d0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.403b60a8.css",
-    "static/js/main.8b60b42b.js"
+    "static/css/main.09e910c5.css",
+    "static/js/main.b44c63c4.js"
   ]
 }

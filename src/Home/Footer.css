@@ -1,0 +1,65 @@
+/* Footer styles */
+
+footer {
+    background-color: #176aa3; /* Choose your desired background color */
+    color: #fff; /* Choose your desired text color */
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Allow content to wrap to the next line on smaller screens */
+}
+
+.footer-section {
+    /* flex: 1; */
+    margin: 0 20px;
+    /* text-align: left; Align text to the left within each section */
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px; /* Add some space below the heading */
+}
+
+/* Style links in the footer */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 8px;
+    list-style-type:circle;
+}
+
+a {
+    color: #fff; /* Choose your link color */
+    text-decoration: none !important;
+    display: flex;
+    align-items: center;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Style the bottom section of the footer */
+.footer-bottom {
+    margin-top: 20px;
+}
+
+/* Style icons */
+.social-icon {
+    margin-right: 8px;
+    font-size: 1.0rem;
+}
+
+/* Style logo */
+.footer-logo {
+    width: 150px; /* Adjust the width as needed */
+    height: auto;
+}

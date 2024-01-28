@@ -1,19 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import {  faTimes  } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {  faTimes  } from '@fortawesome/free-solid-svg-icons';
 import Contact from '../Contact/Contact';
 import Logo from '../assets/img/Sariahub.png'; // Make sure to import your logo
 import background from '../assets/img/Sariahub.png'; // Make sure to import your background image
 import mission from '../assets/img/mission.png'; // Make sure to import your mission icon
 import vision from '../assets/img/vission.png'; // Make sure to import your vision icon
-// import ads from '../assets/img/ads.jpg'; // Make sure to import your vision icon
+import ads from '../assets/img/ads.jpeg'; // Make sure to import your vision icon
 import './Home.css';
 import Services from '../Home/Services';
+import Footer from './Footer';
+// import { useTranslation } from 'react-i18next';
+// import LanguageSwitcher from '../LanguageSwitcher';
 
 
 function Home() {
   const [showModal, setShowModal] = useState(false);
+  // const { t } = useTranslation();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -21,12 +25,12 @@ function Home() {
     }, 5000); // 5000ms = 5 seconds
     const hideTimer = setTimeout(() => {
       setShowModal(false);
-    }, 15000); // 10000ms = 10 seconds (5 seconds for showing + 5 seconds for hiding)
+    }, 1000000); // 10000ms = 10 seconds (5 seconds for showing + 5 seconds for hiding)
     return () => {
       clearTimeout(timer);
       clearTimeout(hideTimer);
     };
-    
+
   }, []);
 
   const handleClose = () => {
@@ -41,7 +45,7 @@ function Home() {
   return (
     <Router>
       <div className="App">
-      {/* <Modal show={showModal} onClose={handleClose} /> */}
+        <Modal show={showModal} onClose={handleClose} />
         <header>
           <nav>
             <img src={Logo} alt="Logo" />
@@ -50,11 +54,11 @@ function Home() {
               {isMobileMenuOpen ? '✖' : '☰'}
             </button>
             <ul className={`nav-links ${isMobileMenuOpen ? 'mobile-menu' : ''}`}>
-
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/services">Services</Link></li>
-              <li><Link to="/contact">Contact Us</Link></li>
+              <li><Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link></li>
+              <li><Link to="/about" onClick={() => setIsMobileMenuOpen(false)}>About</Link></li>
+              <li><Link to="/services" onClick={() => setIsMobileMenuOpen(false)}>Services</Link></li>
+              <li><Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact Us</Link></li>
+              {/* <li><LanguageSwitcher/></li> */}
             </ul>
           </nav>
         </header>
@@ -66,6 +70,8 @@ function Home() {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer />
+
       </div>
     </Router>
   );
@@ -157,24 +163,26 @@ const About = () => (
 //     </div>
 //   </section>
 // );
-// function Modal({ show, onClose }) {
-//   if (!show) return null;
+function Modal({ show, onClose }) {
+  if (!show) return null;
 
-//   return (
-//     <div className="modal-backdrop">
-//       <div className="modal">
-//       <FontAwesomeIcon icon={faTimes} className="close-icon" onClick={onClose} />
-//     <div className="modal-header">
-//         <h1>Ads</h1>
-//         </div>
-//         <div className="modal-body">
-//         <p><img src={ads} alt='Ads' className='modal-img'/></p>
-//         {/* <p>effeeeee</p> */}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
+  return (
+    <div className="modal-backdrop">
+      <div className="modal">
+      <FontAwesomeIcon icon={faTimes} className="close-icon" onClick={onClose} />
+    <div className="modal-header">
+        <h1>اعلاااااااان</h1>
+        <p>عرض خاص لطلاب ماكينزي</p>
+        <p>سجل في الكورسات بتخفيض يصل الي %50   </p>
+        </div>
+        <div className="modal-body">
+        <p><img src={ads} alt='Ads' className='modal-img'/></p>
+        {/* <p>effeeeee</p> */}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 
 

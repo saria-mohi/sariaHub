@@ -131,24 +131,26 @@ body {
   
   header nav ul li {
     padding: 20px;
+    list-style-type: none;
   }
   
   header nav ul li a {
-    text-decoration: none;
-    color: #5f5f5f;
+    text-decoration: none !important;
+    color: #176aa3;
     padding: 10px 15px; /* Padding for the links */
     border-radius: 5px; /* Border radius */
     transition: background-color 0.3s, color 0.3s;  }
   
   header nav ul li a:hover {
     color: #f5f5f5;
-    background-color: #5f5f5f;
+    background-color: #176aa3;
     border-radius: 10px;
     padding: 10px 15px; /* Padding for the links */
   border-radius: 10px; /* Border radius */
   transition: background-color 0.3s, color 0.3s;
+  text-decoration: none !important;
   }
-  
+
   /* Section Styles */
   section {
     padding: 60px 20px;
@@ -297,6 +299,19 @@ body {
     line-height: 1.6; /* Adjust line height for better readability */
     /* Add any other font styling as needed */
   }
+
+  
+  /* Styles for the close button in the modal */
+  /* .close-button {
+    background-color: #b2aeae;
+    color: #d32f2f;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  } */
+
   a{
     text-decoration: none;
   }
@@ -403,6 +418,93 @@ body {
   }
   
   /* Responsive Design */
+ 
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes oscillateRotate {
+    0%, 100% {
+      transform: rotate(-10deg); /* Rotates 10 degrees to the left */
+    }
+    50% {
+      transform: rotate(10deg); /* Rotates 10 degrees to the right */
+    }
+  }
+  @keyframes verticalFlip {
+    0%, 100% {
+      transform: rotateX(0deg);
+    }
+    50% {
+      transform: rotateX(90deg);
+    }
+  }
+  /* Keyframes for fade-in effect */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(37, 93, 157, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+  .modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 5%;
+    max-height: 500px;
+    max-width: 800px;
+    background: linear-gradient(45deg, #f5f5f5,rgb(37, 93, 157,0.3));
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  .modal-img {
+    max-width: 100%; /* Ensure the image fits within the modal */
+    max-height: 350px; 
+    width: 100%;
+    margin-bottom: 10px; /* Space below the image */
+  }
+  .close-icon{
+    /* position: absolute; */
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    color: #555;
+    cursor: pointer;
+  }
+  .close-icon:hover{
+    /* position: absolute; */
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    color: #353232;
+    cursor: pointer;
+  }
+  .modal-header{
+   text-align: center;
+   color: #fff;
+   animation: fadeIn 2s ease-in; 
+
+  }
+  .modal-body{
+    text-align: center;
+    color: #255e9e;
+    animation: fadeIn 2s ease-in; 
+    width: 800px;
+    overflow: auto;
+    height: auto;
+  }
   @media (max-width: 768px) {
     body {
       padding-top: 60px; /* Adjust this for mobile view if needed */
@@ -479,44 +581,54 @@ body {
     .service-card {
       flex-basis: 45%; /* Adjust for smaller screens */
     }
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(37, 93, 157, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    
+    .modal {
+      background-color: white;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 5%;
+      max-height: 500px;
+      /* max-width: 320px; */
+      background: linear-gradient(45deg, #f5f5f5,rgb(37, 93, 157,0.3));
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    .modal-body{
+      text-align: center;
+      color: #255e9e;
+      animation: fadeIn 2s ease-in; 
+      width: 320px;
+      overflow: auto;
+      height: auto;
+    }
+  
     .modal-img {
-        max-width: 100%; /* Ensure the image fits within the modal */
-        height: auto; /* Maintain aspect ratio */
-        width: auto;
-        margin-bottom: 10px; /* Space below the image */
-      }
-      .modal-body{
-        text-align: center;
-        color: #255e9e;
-        animation: fadeIn 2s ease-in; 
-        width: 400px !important;
-        overflow: auto;
-        height: 400px !important;
-      }
-      .modal{
-        margin-top: 20%;
-        max-width: 400px;
-        max-height: 400px;
-      }
+      max-width: 70%; /* Ensure the image fits within the modal */
+      max-height: 350px; 
+      width: 70%;
+      margin-bottom: 10px; /* Space below the image */
+    }
       .modal-header{
         text-align: center;
         color: #ec6462;
         animation: fadeIn 2s ease-in; 
-        width: 400px;
+        width: 300px;
         overflow: auto;
         height: auto;
+        
       }
-      .modal-backdrop {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(37, 93, 157, 0.5);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+   
       .close-icon{
         /* position: absolute; */
         top: 0;
@@ -537,90 +649,16 @@ body {
         width: 100%;
       
       }
-  }
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  @keyframes oscillateRotate {
-    0%, 100% {
-      transform: rotate(-10deg); /* Rotates 10 degrees to the left */
-    }
-    50% {
-      transform: rotate(10deg); /* Rotates 10 degrees to the right */
-    }
-  }
-  @keyframes verticalFlip {
-    0%, 100% {
-      transform: rotateX(0deg);
-    }
-    50% {
-      transform: rotateX(90deg);
-    }
-  }
-  /* Keyframes for fade-in effect */
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
-  
-  .modal-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(37, 93, 157, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  
-  .modal {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    margin-top: 5%;
-    max-height: 800;
-    max-width: 800px;
-    background: linear-gradient(45deg, #f5f5f5,rgb(37, 93, 157,0.3));
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  }
-  .modal-img {
-    max-width: 100%; /* Ensure the image fits within the modal */
-    /* max-height: 400px; Maintain aspect ratio */
-    width: auto;
-    margin-bottom: 10px; /* Space below the image */
-  }
-  .close-icon{
-    /* position: absolute; */
-    top: 0;
-    right: 0;
-    font-size: 30px;
-    color: #555;
-    cursor: pointer;
-  }
-  .close-icon:hover{
-    /* position: absolute; */
-    top: 0;
-    right: 0;
-    font-size: 30px;
-    color: #353232;
-    cursor: pointer;
-  }
-  .modal-header{
-   text-align: center;
-   color: #ec6462;
-   animation: fadeIn 2s ease-in; 
-
-  }
-  .modal-body{
-    text-align: center;
-    color: #255e9e;
-    animation: fadeIn 2s ease-in; 
-    width: 800px;
-    overflow: auto;
-    height: auto;
+      .enrollment-modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        width:auto;
+      }
   }
